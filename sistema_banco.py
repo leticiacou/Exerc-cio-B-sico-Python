@@ -1,11 +1,12 @@
 print("Gostaria de fazer sua conta no banco? ")
+print("Opções:")
 choice = input("1.Sim \n2.Não ")
 print("")
 
 if (choice == '2'):
     print("Ok, tenha um ótimo dia!")
 
-if(choice == '1'):
+elif(choice == '1'):
 
         nome = input("Qual seu nome completo? ")
 
@@ -13,7 +14,7 @@ if(choice == '1'):
             print("Nome inválido tente novamente ")
             exit()
 
-        if len(nome) >= 3:
+        elif len(nome) >= 3:
             senha1 = input("Digite sua senha ") 
             senha2 = input("Confirme sua senha ")
 
@@ -40,7 +41,7 @@ if(choice == '1'):
                 if(choice2 == '1'):
                     print(saldo)
 
-                if(choice2 == '2'):
+                elif(choice2 == '2'):
                     deposito = float(input("Quanto deseja depositar? ")) 
                     
                     if(deposito <= 0):
@@ -49,7 +50,7 @@ if(choice == '1'):
 
                     saldo += deposito 
 
-                if(choice2 == '3'):      
+                elif(choice2 == '3'):      
                     saque = float(input("Quanto deseja sacar da sua conta? "))
 
                     if(saque > saldo):
@@ -58,7 +59,7 @@ if(choice == '1'):
 
                     saldo -= saque
 
-                if(choice2 == '4'):
+                elif(choice2 == '4'):
                     exit()        
                   
 
